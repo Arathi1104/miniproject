@@ -1,3 +1,4 @@
+
 import "./App.css";
 
 const products = [
@@ -5,25 +6,29 @@ const products = [
     name: "Fresh Tomatoes",
     category: "Vegetables",
     price: "₹50 / kg",
-    image: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337",
+    image:
+      "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=700&q=80",
   },
   {
     name: "Fresh Carrots",
     category: "Vegetables",
     price: "₹60 / kg",
-    image: "https://images.unsplash.com/photo-1445282768818-728615cc910a",
+    image:
+      "https://images.unsplash.com/photo-1445282768818-728615cc910a?auto=format&fit=crop&w=700&q=80",
   },
   {
-    name: "Fresh Bananas",
+    name: "Fresh Apples",
     category: "Fruits",
-    price: "₹45 / kg",
-    image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e",
+    price: "₹120 / kg",
+    image:
+      "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=700&q=80",
   },
   {
     name: "Fresh Spinach",
-    category: "Leafy Vegetables",
+    category: "Leafy Greens",
     price: "₹30 / bunch",
-    image: "https://images.unsplash.com/photo-1576045057995-568f588f82fb",
+    image:
+      "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=700&q=80",
   },
 ];
 
@@ -34,13 +39,12 @@ function Home() {
       {/* Navbar */}
       <nav className="navbar">
         <div className="logo">
-          FarmFresh<span>Connect</span>
+          🌱 FarmFresh
         </div>
 
         <div className="nav-links">
           <a href="/">Home</a>
           <a href="/products">Products</a>
-          <a href="/farmers">Farmers</a>
           <a href="/about">About</a>
           <a href="/contact">Contact</a>
         </div>
@@ -51,10 +55,11 @@ function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="hero">
+
         <div className="hero-content">
-          <p className="small-title">FRESH FROM LOCAL FARMS</p>
+          <p className="hero-label">FRESH FROM LOCAL FARMS</p>
 
           <h1>
             Fresh Food.
@@ -62,129 +67,195 @@ function Home() {
             <span>Directly From Farmers.</span>
           </h1>
 
-          <p className="hero-text">
-            Buy fresh and quality farm products directly from local farmers.
-            Healthy food, fair prices, and trusted farmers.
+          <p className="hero-description">
+            Discover fresh and quality farm products directly from local
+            farmers. Shop fresh, support farmers, and enjoy better food.
           </p>
 
           <div className="hero-buttons">
-            <button className="shop-btn">
-              Shop Fresh Products →
+            <button className="primary-btn">
+              Shop Now →
             </button>
 
-            <button className="farmer-btn">
-              Explore Farmers
+            <button className="secondary-btn">
+              Explore Products
             </button>
+          </div>
+
+          <div className="hero-stats">
+            <div>
+              <strong>100%</strong>
+              <span>Fresh Products</span>
+            </div>
+
+            <div>
+              <strong>Local</strong>
+              <span>Trusted Farmers</span>
+            </div>
+
+            <div>
+              <strong>Fast</strong>
+              <span>Home Delivery</span>
+            </div>
           </div>
         </div>
 
-        <div className="hero-image">
+        <div className="hero-image-container">
           <img
-            src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854"
-            alt="Fresh Farm"
+            src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1000&q=80"
+            alt="Fresh vegetables"
           />
+
+          <div className="fresh-card">
+            <span>🌿</span>
+            <div>
+              <strong>Farm Fresh Connect</strong>
+              <small>Picked with care</small>
+            </div>
+          </div>
         </div>
-      </section>
 
-      {/* Categories */}
-      <section className="categories">
-        <div className="section-heading">
-          <p>EXPLORE</p>
-          <h2>Shop by Category</h2>
-        </div>
-
-        <div className="category-container">
-
-          <div className="category-card">
-            <div className="category-icon">🥬</div>
-            <h3>Vegetables</h3>
-            <p>Fresh farm vegetables</p>
-          </div>
-
-          <div className="category-card">
-            <div className="category-icon">🍎</div>
-            <h3>Fruits</h3>
-            <p>Fresh seasonal fruits</p>
-          </div>
-
-          <div className="category-card">
-            <div className="category-icon">🌾</div>
-            <h3>Grains</h3>
-            <p>Quality grains & cereals</p>
-          </div>
-
-          <div className="category-card">
-            <div className="category-icon">🥛</div>
-            <h3>Dairy</h3>
-            <p>Fresh dairy products</p>
-          </div>
-
-        </div>
       </section>
 
       {/* Popular Products */}
       <section className="products-section">
 
-        <div className="section-heading product-heading">
+        <div className="section-header">
           <div>
-            <p>FRESH PICKS</p>
+            <p className="section-label">OUR PRODUCTS</p>
             <h2>Popular Products</h2>
+            <p>
+              Fresh products from our trusted local farmers.
+            </p>
           </div>
 
-          <button className="view-btn">
+          <button className="view-all-btn">
             View All →
           </button>
         </div>
 
-        <div className="product-container">
+        <div className="product-grid">
 
           {products.map((product, index) => (
             <div className="product-card" key={index}>
 
               <div className="product-image">
-                <img src={product.image} alt={product.name} />
+                <img
+                  src={product.image}
+                  alt={product.name}
+                />
+
+                <span className="fresh-tag">
+                  Fresh
+                </span>
               </div>
 
-              <div className="product-info">
+              <div className="product-details">
+
                 <p className="product-category">
                   {product.category}
                 </p>
 
                 <h3>{product.name}</h3>
 
-                <div className="product-bottom">
+                <div className="product-footer">
                   <strong>{product.price}</strong>
-                  <button>Add to Cart</button>
+
+                  <button className="add-btn">
+                    +
+                  </button>
                 </div>
+
               </div>
 
             </div>
           ))}
 
         </div>
+
       </section>
 
-      {/* Farmer CTA */}
-      <section className="farmer-section">
-        <div>
-          <p>ARE YOU A FARMER?</p>
-          <h2>Sell Your Fresh Products Directly to Customers.</h2>
+      {/* Why Choose Us */}
+      <section className="why-section">
+
+        <div className="why-heading">
+          <p className="section-label">WHY FARMFRESH?</p>
+
+          <h2>
+            Freshness You Can Trust
+          </h2>
+
           <p>
-            Join FarmFresh Connect and grow your local customer base.
+            We connect customers directly with local farmers
+            to make fresh food easily accessible.
           </p>
-          <button>Become a Farmer →</button>
         </div>
+
+        <div className="why-grid">
+
+          <div className="why-card">
+            <div className="why-icon">🌱</div>
+            <h3>Farm Fresh</h3>
+            <p>
+              Fresh and quality products directly from local farms.
+            </p>
+          </div>
+
+          <div className="why-card">
+            <div className="why-icon">🤝</div>
+            <h3>Support Farmers</h3>
+            <p>
+              Help local farmers reach customers without unnecessary
+              middlemen.
+            </p>
+          </div>
+
+          <div className="why-card">
+            <div className="why-icon">🚚</div>
+            <h3>Easy Delivery</h3>
+            <p>
+              Order your favourite farm products and get them delivered.
+            </p>
+          </div>
+
+          <div className="why-card">
+            <div className="why-icon">✓</div>
+            <h3>Trusted Quality</h3>
+            <p>
+              Shop from verified farmers and quality products.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* CTA */}
+      <section className="cta-section">
+
+        <div>
+          <p>READY TO SHOP FRESH?</p>
+
+          <h2>
+            Good Food Starts With Good Farmers.
+          </h2>
+        </div>
+
+        <button>
+          Start Shopping →
+        </button>
+
       </section>
 
       {/* Footer */}
       <footer>
+
         <div className="footer-logo">
-          FarmFresh<span>Connect</span>
+          🌱 FarmFresh
         </div>
 
         <p>
-          Connecting local farmers with customers for fresh,
-          quality food.
+          Connecting local farmers with customers for a fresher tomorrow.
         </p>
 
         <div className="footer-links">
@@ -194,9 +265,10 @@ function Home() {
           <a href="/contact">Contact</a>
         </div>
 
-        <p className="copyright">
+        <div className="copyright">
           © 2026 FarmFresh Connect. All rights reserved.
-        </p>
+        </div>
+
       </footer>
 
     </div>
