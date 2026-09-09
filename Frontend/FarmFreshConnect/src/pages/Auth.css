@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  background: #f5f8f3;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.signup-card {
+  max-width: 470px;
+}
+
+.auth-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e8f4e3;
+  border-radius: 50%;
+  font-size: 28px;
+}
+
+.auth-card h1 {
+  margin: 0;
+  text-align: center;
+  color: #285522;
+  font-size: 28px;
+}
+
+.auth-description {
+  margin: 8px 0 25px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-card label {
+  margin: 12px 0 7px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  display: block;
+}
+
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+  background: #ffffff;
+  color: #333333;
+}
+
+.auth-card input::placeholder {
+  color: #999999;
+  opacity: 1;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+  border-color: #4d8b3a;
+  box-shadow: 0 0 0 3px rgba(77, 139, 58, 0.1);
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: #4d8b3a;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.auth-button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: #4d8b3a;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background: #3d7330;
+}
+
+.auth-button:disabled {
+  background: #9bb593;
+  cursor: not-allowed;
+}
+
+.account-text {
+  margin-top: 22px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
+
+.account-text a {
+  color: #4d8b3a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.account-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .auth-card {
+    padding: 30px 22px;
+  }
+
+  .auth-card h1 {
+    font-size: 24px;
+  }
+}

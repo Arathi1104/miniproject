@@ -1,5 +1,11 @@
 
 import "./App.css";
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Products from "./pages/Product";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 const products = [
   {
@@ -50,8 +56,8 @@ function Home() {
         </div>
 
         <div className="nav-buttons">
-          <button className="login-btn">Login</button>
-          <button className="signup-btn">Sign Up</button>
+          <a href="/login" className="login-btn">Login</a>
+          <a href="/signup" className="signup-btn">Sign Up</a>
         </div>
       </nav>
 
@@ -275,4 +281,21 @@ function Home() {
   );
 }
 
-export default Home;
+
+function App(){
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
+        <Route path="/products" element={<Products/>} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />}/>
+
+
+      </Routes>
+    </BrowserRouter>
+  );
+}
+export default App;
